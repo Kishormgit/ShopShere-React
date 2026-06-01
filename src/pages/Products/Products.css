@@ -1,0 +1,38 @@
+.products-page {
+  padding: 60px 40px;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.products-heading {
+  text-align: center;
+  font-size: 52px;
+  margin-bottom: 55px;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .products-page {
+    padding: 40px 20px;
+  }
+
+  .products-heading {
+    font-size: 38px;
+  }
+
+  .products-container {
+    gap: 25px;
+  }
+
+}

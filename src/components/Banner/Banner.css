@@ -1,0 +1,135 @@
+.banner {
+  height: 85vh;
+
+  background-image:
+    linear-gradient(
+      rgba(8, 20, 47, 0.65),
+      rgba(8, 20, 47, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 60px;
+}
+
+.banner-content {
+  max-width: 650px;
+  color: white;
+}
+
+.banner-tag {
+  display: inline-block;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(10px);
+
+  padding: 10px 20px;
+
+  border-radius: 30px;
+
+  margin-bottom: 25px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.banner-content h1 {
+  font-size: 65px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.banner-content p {
+  font-size: 20px;
+  color: #e2e8f0;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.shop-now-btn {
+  background: #f59e0b;
+  color: white;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+
+.learn-more-btn {
+  background: transparent;
+  color: white;
+
+  border: 2px solid white;
+
+  padding: 15px 30px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+  background: white;
+  color: #08142f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .banner {
+    height: 70vh;
+  }
+
+  .banner-overlay {
+    padding: 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+  }
+
+}
