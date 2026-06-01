@@ -50,7 +50,7 @@ function Contact() {
 
             <h4>Phone</h4>
 
-            <p>+91 98765 43210</p>
+            <p>+91 88915 10639</p>
 
           </div>
 
