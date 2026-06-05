@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 import { getProducts } from "../../services/Api";
+
+import { SearchContext } from "../../context/SearchContext";
 
 import "./Products.css";
 
 function Products() {
 
   const [products, setProducts] = useState([]);
+
+  const { searchTerm } = useContext(SearchContext);
 
   useEffect(() => {
 
@@ -23,6 +27,12 @@ function Products() {
     setProducts(data);
   };
 
+  const filteredProducts = products.filter((product) =>
+    product.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
+  );
+
   return (
 
     <div className="products-page">
@@ -34,7 +44,9 @@ function Products() {
       <div className="products-container">
 
         {
-          products.map((product) => (
+          filteredProducts.length > 0 ?
+
+          filteredProducts.map((product) => (
 
             <ProductCard
               key={product.id}
@@ -42,6 +54,12 @@ function Products() {
             />
 
           ))
+
+          :
+
+          <h2>
+            No Products Found
+          </h2>
         }
 
       </div>

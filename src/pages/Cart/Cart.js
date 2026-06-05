@@ -172,7 +172,7 @@ function Cart() {
 
           <button
             className="checkout-btn"
-            onClick={() => navigate("/checkout")}
+            
           >
             Proceed To Checkout
           </button>
